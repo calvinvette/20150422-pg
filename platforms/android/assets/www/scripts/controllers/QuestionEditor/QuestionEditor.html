@@ -1,0 +1,119 @@
+<div class="container"
+     ng-swipe-left="swipeLeft()"
+     ng-swipe-right="swipeRight()"
+     ng-class="{panelFront : showFront, panelBack : !showFront}">
+
+  <!--
+    hm-swipeleft="swipeLeft()"
+     hm-swiperight="swipeRight()"
+     hm-swipeup="swipeUp()"
+     hm-swipedown="swipeDown()"
+     hm-pinchin="pinchIn()"
+     hm-pinchout="pinchOut()"
+
+  -->
+  <div class="panel">
+    <div class="front card">
+      Question Here.
+    </div>
+    <div class="back card">
+      Answer Here.
+    </div>
+
+  </div>
+
+
+  <link href="scripts/controllers/QuestionEditor/QuestionEditor.css" rel="stylesheet"/>
+
+
+  <table id="tblDemo" class="demo-table table">
+    <tr>
+      <td>
+        Date:
+      </td>
+      <td>{{startDate | date:'dd MMMM yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>
+        Score:
+      </td>
+      <td>
+        {{score | currency}}
+      </td>
+    </tr>
+  </table>
+
+  <div class="demo-table">
+    <span>Pretend this is a Bootstrap row/col span-block table (not an HTML table)</span>
+  </div>
+
+  Filter By Category: <input ng-model="filterCategory"/><br/>
+  <table class="table table-striped" id="tblCustomers">
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Category</th>
+      <th>Points</th>
+      <th>Comments/Context</th>
+    </tr>
+    <!-- TODO-CV adjust $index and double-add problem, question.questionId -->
+    <tr ng-repeat="question in filteredQuestions track by $index"
+        ng-dblclick="setEditing(question, $index)"
+        qm-enter="save(question)"
+        qm-escape="revert()"
+      >
+      <td>
+        <span ng-hide="isEditing(question)">
+          {{question.questionText}}
+        </span>
+        <span ng-show="isEditing(question)">
+          <input ng-model="currentlyEditingQuestion.questionText"/>
+        </span>
+      </td>
+      <td>
+        <span ng-hide="isEditing(question)">
+        {{question.answerText}}
+          </span>
+        <span ng-show="isEditing(question)">
+           <input ng-model="currentlyEditingQuestion.answerText"/>
+        </span>
+      </td>
+      <td>
+        <span ng-hide="isEditing(question)">
+        {{question.category}}
+          </span>
+        <span ng-show="isEditing(question)">
+           <input ng-model="currentlyEditingQuestion.category"/>
+        </span>
+      </td>
+      <td>
+        <span ng-hide="isEditing(question)">
+        {{question.pointValue}}
+          </span>
+        <span ng-show="isEditing(question)">
+           <input ng-model="currentlyEditingQuestion.pointValue"/>
+        </span>
+      </td>
+      <td>
+        <span ng-hide="isEditing(question)">
+        {{question.contextNotes}}
+          </span>
+        <span ng-show="isEditing(question)">
+           <input ng-model="currentlyEditingQuestion.contextNotes"/>
+        </span>
+      </td>
+      <td>
+        <button ng-click="delete(question)"><span class="glyphicon glyphicon-trash"></span></button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        <button ng-click="addQuestion()"><span class="glyphicon glyphicon-plus"></span></button>
+      </td>
+    </tr>
+  </table>
+
+
+</div>
+
+

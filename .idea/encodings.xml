@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/LoginRegistration/LoginRegistration.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/LoginRegistration/LoginRegistration.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/QuestionEditor/QuestionEditor.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/QuestionEditor/QuestionEditor.controller.ts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/QuestionEditor/QuestionEditor.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/QuestionEditor/QuestionEditor.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/QuestionEditor/QuestionRow.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/qmEnter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/qmEscape.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/filters/CategoryFilter.ts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/models/Player.ts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/models/Question.ts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/QuestionService.ts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/UserRegistrationService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+  </component>
+</project>

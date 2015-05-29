@@ -1,0 +1,22 @@
+QUESTION ROW TEMPLATE HERE...
+<h1>{{question.questionText}}</h1>
+
+<h1>{{question.answerText}}</h1>
+
+
+
+
+
+
+  <div class="form-group">
+    <span class="col-sm-2"><label for="{{'txt' + varName}}">{{label}}:</label></span>
+    <span class="col-sm-6"><input class="form-control id="{{'txt' + varName}}" name="{{'txt' + varName}}" ng-model="{{ngModel}}" type="{{type}}"/></span>
+    <span class="col-sm-4">errors</span>
+  </div>
+
+<form>
+  <cv-formField label="First Name" ng-model="customer.firstName" type="text"/>
+  <cv-formField label="Last Name" ng-model="customer.lastName" type="text"/>
+  <cv-formField label="{{label.phoneNmber}}" ng-model="customer.phoneNmber" type="tel"/>
+  <cv-formField label="{{label.email}}" ng-model="customer.email" type="email"/>
+</form>

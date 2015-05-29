@@ -1,0 +1,19 @@
+ERRORS for {{fieldTitle}}
+<div ng-transclude>
+
+<span class="field-error" xng-show="custRegForm.{{fieldVar}}.$touched && custRegForm.{{fieldVar}}.$error.required">
+		The {{fieldTitle}} field is required.
+</span>
+
+<span class="field-error" xng-show="custRegForm.{{fieldVar}}.$touched && custRegForm.{{fieldVar}}.$error.pattern">
+		The {{fieldTitle}} field can only have letters, hyphens, spaces or apostrophies.
+</span>
+
+<span class="field-error" xng-show="custRegForm.{{fieldVar}}.$touched && custRegForm.{{fieldVar}}.$error.minlength">
+		The {{fieldTitle}} field must have at least {{minlength}} characters.
+</span>
+
+<span class="field-error" xng-show="custRegForm.{{fieldVar}}.$touched && custRegForm.{{fieldVar}}.$error.maxlength">
+		The {{fieldTitle}} field can have at most {{maxlength}} characters.
+</span>
+</div>

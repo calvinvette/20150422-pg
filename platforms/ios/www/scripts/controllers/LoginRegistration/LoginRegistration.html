@@ -1,0 +1,68 @@
+<div class="container col-sm-6">
+  <form role="form" class="inline-form" novalidate="true">
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtUserName">Login:</label></span>
+      <span class="col-sm-6"><input class="form-control" id="txtUserName" name="txtUserName"
+                                    ng-model="userName"/></span>
+      <span class="col-sm-4">errors</span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtPassword">Password:</label></span>
+      <span class="col-sm-6"><input class="form-control id=" txtPassword" name="txtPassword" ng-model="password" type="password"/></span>
+      <span class="col-sm-4">errors</span>
+    </div>
+    <span class="col-sm-4"><button ng-click="Login()">Login</button></span>
+  </form>
+</div>
+<div class="container col-sm-6">
+  <div><h3>Register</h3></div>
+  <form role="form" class="inline-form" novalidate="true" name="registrationForm">
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtEmail">Email:</label></span>
+      <span class="col-sm-6"><input id="txtEmail" name="txtEmail" ng-model="email" type="email"
+                                    required="required"/></span>
+      <span class="col-sm-4">
+        <div ng-hide="registrationForm.txtEmail.$pristine && !registrationForm.txtEmail.touched" class="error">
+          <span ng-show="registrationForm.txtEmail.$error.required">The EMail Field is REQUIRED!!!</span>
+          <span ng-show="registrationForm.txtEmail.$error.email">You have to have a valid RFC-832 email address!</span>
+        </div>
+		<span></span>
+      </span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtUserName">User Name (for Login):</label></span>
+      <span class="col-sm-6"><input id="txtUserName" name="txtUserName" ng-model="userName"
+                                    require="required" ng-minlength="4" ng-maxlength="16" 
+									title="User Name"
+									qm-form-errors="true"
+        /></span>
+		<span class="col-sm-4">
+			<span></span>
+		</span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtPassword">Password:</label></span>
+      <span class="col-sm-6"><input id="txtPassword" name="txtPassword" ng-model="password" type="password"
+                                    ng-pattern="'[a-zA-Z]\\w{3,14}$'" 
+									title="Password"
+									qm-form-errors="true"
+        /></span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtConfirmPassword">Confirm Password:</label></span>
+      <span class="col-sm-6"><input id="txtConfirmPassword" name="txtConfirmPassword" ng-model="confirmPassword"
+                                    type="password"/></span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtDisplayName">Default Display Name (for displaying in a game):</label></span>
+      <span class="col-sm-6"><input id="txtDisplayName" name="txtDisplayName" ng-model="displayName"/></span>
+    </div>
+    <div class="form-group">
+      <span class="col-sm-2"><label for="txtBirthDate">Birth Date (optional):</label></span>
+      <span class="col-sm-6"><input id="txtBirthDate" name="txtBirthDate" ng-model="birthDate" type="date"
+           max-date="new Date()" date-options="{ formatYear: 'yy', format: 'yy-mm-dd'}"
+        /></span>
+    </div>
+    <span class="col-sm-4"><button ng-click="Register()">Register</button></span>
+  </form>
+</div>

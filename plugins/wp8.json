@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"wp-package\" value=\"SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "{d9086190-05db-11e5-92d0-6b6337bb7109}"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "{d9086190-05db-11e5-92d0-6b6337bb7109}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{d9086190-05db-11e5-92d0-6b6337bb7109}"
+        },
+        "com.megster.cordova.ble": {
+            "PACKAGE_NAME": "{d9086190-05db-11e5-92d0-6b6337bb7109}"
+        }
+    },
+    "dependent_plugins": {}
+}

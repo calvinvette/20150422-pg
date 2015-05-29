@@ -1,0 +1,88 @@
+@-webkit-keyframes fontbulger {
+  0% {
+    font-size: 10px;
+    background-color: royalblue;
+  }
+  100% {
+    font-size: 18px;
+    background-color: aquamarine;
+    transform: translate(40px, 20px); // rotate(90deg); //  // scale, skew, translate
+  }
+}
+
+@keyframes fontbulger {
+  0% {
+    font-size: 10px;
+  }
+  100% {
+    font-size: 18px;
+  }
+}
+
+.mySlowFontEmphasis {
+  animation: fontbulger 2s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: fontbulger;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count : 4;
+  -webkit-animation-direction: alternate;
+}
+
+.myFastFontEmphasis {
+  -webkit-animation: fontbulger 500ms infinite;
+}
+
+
+.panel {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.front {
+  z-index: 2;
+  background-image: url(http://img.afreecodec.com/images/v3/wp-content/uploads/2011/05/00_chrome_icon.jpg);
+}
+
+.back {
+  z-index: 1;
+  -webkit-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  background-image: url(http://www.digitaltrends.com/wp-content/uploads/2011/03/ie-9-icon.jpg);
+}
+
+.panelFront .front {
+  z-index: 1;
+  -webkit-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.panelBack .back {
+  z-index: 2;
+  -webkit-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
